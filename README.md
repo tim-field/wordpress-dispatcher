@@ -16,3 +16,9 @@ new \TheFold\WordPress\Dispatch([
     }
 ]);
 ```
+
+##Install
+
+###Composer
+
+<https://packagist.org/packages/thefold/wordpress-dispatcher>
