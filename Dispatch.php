@@ -8,7 +8,7 @@ class Dispatch {
 
         add_filter('rewrite_rules_array', function($rules) use ($url_callbacks) {
 
-            foreach(array_keys($url_callbacks) as $look_for_in_url) {
+            foreach (array_keys($url_callbacks) as $look_for_in_url) {
 
                 $newRule = ['^'.trim($look_for_in_url,'/').'/?$' => 'index.php?'.$this->query_var_name($look_for_in_url).'=1'];
                 $rules = $newRule + $rules;
@@ -19,7 +19,7 @@ class Dispatch {
 
         add_filter('query_vars', function($qvars) use ($url_callbacks) {
             
-            foreach(array_keys($url_callbacks) as $look_for_in_url) {
+            foreach (array_keys($url_callbacks) as $look_for_in_url) {
                 
                 $var = $this->query_var_name($look_for_in_url);
                 $qvars[] = $var; 
@@ -31,7 +31,7 @@ class Dispatch {
 
             global $wp_query;
 
-            foreach($url_callbacks as $url_key => $callback) {
+            foreach ($url_callbacks as $url_key => $callback) {
 
                 if ($wp_query->get( $this->query_var_name($url_key))) {
 
@@ -73,7 +73,7 @@ class Dispatch {
 
         static $cache;
 
-        if(!isset($cache[$rewrite])){
+        if (!isset($cache[$rewrite])) {
             $cache[$rewrite] = md5($rewrite);
         }
 
@@ -81,8 +81,11 @@ class Dispatch {
     }
 
     protected function send_404() {
+
         global $wp_query;
+
         status_header('404');
+
         $wp_query->set_404();
     }
 }
