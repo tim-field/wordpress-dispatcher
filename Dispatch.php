@@ -33,7 +33,7 @@ class Dispatch {
 
             foreach($url_callbacks as $url_key => $callback) {
 
-                if ( $wp_query->get( $this->query_var_name($url_key) ) ){
+                if ($wp_query->get( $this->query_var_name($url_key))) {
 
                     $wp_query->is_home = false;
 

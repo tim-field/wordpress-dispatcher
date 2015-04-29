@@ -8,5 +8,10 @@
             "email": "tim@thefold.co.nz"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "TheFold\\WordPress\\":"/"
+        }
+    }
     "require": {}
 }
