@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WordPress Dispatcher.
+ * Plugin Name: WordPress Dispatcher
  * Plugin URI: https://github.com/timbofield/wordpress-dispatcher
  * Description: Create URL endpoints within WordPress
  * Version: 1.0
@@ -8,4 +8,5 @@
  * Author URI: http://www.thefold.co.nz
  * License: MIT
  */
-require 'Dispatch.php';
+
+require_once(__DIR__ . '/Dispatch.php');
