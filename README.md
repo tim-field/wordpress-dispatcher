@@ -2,6 +2,9 @@
 
 URL endpoints in WordPress
 
+Example
+-------
+
 ```
 new \TheFold\WordPress\Dispatch([
 
