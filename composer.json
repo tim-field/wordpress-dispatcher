@@ -1,0 +1,12 @@
+{
+    "name": "thefold/wordpress-dispatcher",
+    "description": "Create URL endpoints within WordPress",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tim Field",
+            "email": "tim@thefold.co.nz"
+        }
+    ],
+    "require": {}
+}
