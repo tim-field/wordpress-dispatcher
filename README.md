@@ -1,6 +1,6 @@
 # WordPress Dispatcher
 
-Easily add URL endpoints in WordPress. Map a url to a callback.
+Easily add custom URL endpoints in WordPress. Map a url to a function.
 
 ##Example
 
