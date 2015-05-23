@@ -1,6 +1,7 @@
 {
     "name": "thefold/wordpress-dispatcher",
     "description": "Create URL endpoints within WordPress",
+    "type": "wordpress-plugin",
     "license": "MIT",
     "authors": [
         {
