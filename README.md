@@ -24,4 +24,4 @@ new \TheFold\WordPress\Dispatch([
 
 ###Composer
 
-<https://packagist.org/packages/thefold/wordpress-dispatcher>
+composer require thefold/wordpress-dispatcher
