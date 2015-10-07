@@ -1,4 +1,4 @@
-# WordPress Dispatcher
+# WordPress Dispatcher / Router
 
 Easily add custom URL endpoints in WordPress. Map a url to a function.
 
