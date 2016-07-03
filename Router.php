@@ -2,7 +2,7 @@
 
 namespace TheFold\WordPress;
 
-class Dispatch {
+class Router {
 
     static function routes(array $url_callbacks, $priority = 5) {
 
