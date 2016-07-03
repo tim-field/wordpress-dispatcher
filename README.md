@@ -5,12 +5,14 @@ Easily add custom URL endpoints in WordPress. Map a url to a function.
 ##Example
 
 ```
-new \TheFold\WordPress\Dispatch([
+use \TheFold\WordPress\Router;
+
+Router::routes([
 
     'testing-a-url' => function(){
-        echo 'Hello Ted'; 
+        echo 'Hello Ted';
     },
-    
+
     'hello-([a-z]+)' => function($request, $name){
         echo "Hello $name";
     }
