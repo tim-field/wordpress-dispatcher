@@ -6,6 +6,7 @@ class Router {
 
     static function routes(array $url_callbacks, $priority = 5) {
 
+        //Inform WordPress that these routes ( rewrites ) exist by adding to the rewrite_rules_array
         add_filter('rewrite_rules_array', function($rules) use ($url_callbacks) {
             return array_reduce( array_keys($url_callbacks), function($rules, $route) {
                 $newRule = ['^'.trim($route,'/').'/?$' => 'index.php?'.static::query_var_name($route).'=1'];
@@ -23,7 +24,7 @@ class Router {
         add_action( 'template_redirect', function() use ($url_callbacks) {
             global $wp_query;
             foreach ($url_callbacks as $route => $callback) {
-                if ($wp_query->get( static::query_var_name($route))) {
+                if ($wp_query->get( static::query_var_name($route)) ) {
                     $wp_query->is_home = false;
                     $params = null;
                     preg_match('#'.trim($route,'/').'#',$_SERVER['REQUEST_URI'],$params);
