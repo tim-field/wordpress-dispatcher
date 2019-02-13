@@ -2,7 +2,7 @@
 
 Easily add custom URL endpoints in WordPress. Map a url to a function.
 
-##Example
+## Example
 
 ```
 use \TheFold\WordPress\Router;
@@ -22,8 +22,8 @@ Router::routes([
 /testing-a-url & /hello-dougle will now be accessable in your WordPress site.
 
 
-##Install
+## Install
 
-###Composer
+### Composer
 
 composer require thefold/wordpress-dispatcher
